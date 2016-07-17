@@ -26,11 +26,15 @@ def getWordCount(text):
 	#split the text into words
 	wordList = re.findall(r'\w+', text)
 
-	#print wordList
-	#print len(wordList)
 	return len(wordList)
 	
-	
+def getBeautifulWordCount(text)	:
+	wordList = re.findall(r'\w+', text)
+	beautifulWords = 0
+	for word in wordList :
+		if len(word) >= 5 :
+			beautifulWords += 1
+	return beautifulWords
 	
 def getSentenceCount(text):
 	#split the essay into sentences
@@ -93,13 +97,13 @@ if __name__ == '__main__' :
 	
 	############################
 	#open essay
-	sourceFileName = "../Sample_Essays/essay3.txt"
-	sourceFile = open(sourceFileName, "r")
+	#sourceFileName = "../Sample_Essays/essay3.txt"
+	#sourceFile = open(sourceFileName, "r")
 	
 	#read essay
-	text = sourceFile.read()
+	#text = sourceFile.read()
 	
-	getWordCount(text)
+	getBeautifulWordCount(text)
 	getSentenceCount(text)
 	#getParaCount(text)
 	#getAvgSentenceLength(text)

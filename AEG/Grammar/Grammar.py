@@ -17,7 +17,7 @@ def frange(x, a, b):
 	else:
 		return False
 
-
+lgDict = 0;
 
 # @brief function to parse sentence
 # 		INPUT : sentence and dictionary of links
@@ -123,8 +123,7 @@ def parseSentence(sentence, lgDict):
 				score = 3
 		
 		else:
-			score = 1
-	#end of elif construct
+			score = 1	#end of elif construct
 	
 	else:
 		#illegal sentence
@@ -137,6 +136,16 @@ def parseSentence(sentence, lgDict):
 	
 	return score
 
+# make and delete dictionary
+def makeDictionary():
+	global lgDict
+	lgDict = clg.dictionary_create("data/4.0.dict", "data/4.0.knowledge", 'data/4.0.constituent-knowledge', "data/4.0.affix");
+
+def deleteDictionary():
+	#delete dictionary
+	global lgDict
+	clg.dictionary_delete(lgDict)
+
 
 # @brief main function to be called
 #		 INPUT : essay
@@ -144,7 +153,8 @@ def parseSentence(sentence, lgDict):
 
 def getGrammarScore(essay):
 	#make dictionary
-	lgDict = clg.dictionary_create("data/4.0.dict", "data/4.0.knowledge", 'data/4.0.constituent-knowledge', "data/4.0.affix");
+	global lgDict
+	#lgDict = clg.dictionary_create("data/4.0.dict", "data/4.0.knowledge", 'data/4.0.constituent-knowledge', "data/4.0.affix");
 	
 	#a dictionary to hold sentence and its score
 	sentScore = {}
@@ -155,16 +165,14 @@ def getGrammarScore(essay):
 		sentScore[sentence] = parseSentence(sentence, lgDict)
 		#print '________________________________________________________\n'
 	
-	#delete dictionary
-	clg.dictionary_delete(lgDict)
-	
+	# delete Dictionary
+	#clg.dictionary_delete(lgDict)
+
 	#computing cumulative score
 	cumScore = float(sum(sentScore.values()))/len(nltk.sent_tokenize(essay))
 	
 	return cumScore, sentScore
 	
-
-
 
 # TEST DRIVER FOR TESTING THE MODULE INDEPENDENTLY
 if __name__ == '__main__':

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Automated Essay Grader</title>
+	<meta charset ="utf-8" />
+	<link type="text/css" rel = "stylesheet" href = "../style.css" />
+</head>
+
+<body>
+	<div id = "canvas">
+	<div>
+		<div id = "heading"> <h1><center> Essay Grading System </center></h1></div>
+		<br /><br /> <hr /> <hr /> <br />
+
+		<div style="float:left; font-size:18pt" id = "scoretable">
+			<img src = "../images/grade.jpg" />
+			<h2> Overall Score</h2>
+			<table border="1" align="right">
+				<tr> <th class = "big">GRADE (0-10)</th> <th class = "big">7.94879815385</th></tr>
+				<tr> <th>Spelling(0-5)</th> <td>4.82</td></tr>
+				<tr> <th>Grammar(0-5)</th> <td>1.92</td></tr>				
+			</table>
+		</div>
+		
+		<div style="float:right" id = "statistics">
+			<img src = "../images/stats.jpg" />
+			<h2> Essay Statistics</h2>
+			<table border = "1" align="left">
+				<tr align='left'> <th>Word Count</th> <td>194</td></tr>
+				<tr align='left'> <th>Sentence Count</th> <td>13</td></tr>
+				<tr align='left'> <th>Paragraph Count</th> <td>1</td></tr>
+				<tr align='left'> <th>Average Sentence Length</th> <td>14.92</td> </tr>
+				<tr align='left'> <th>Standard Deviation from the Average Sentence Length</th> <td>9.70</td> </tr>
+			</table>
+		</div>
+	    </div>		
+		
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> <hr /> <hr /> <br />
+		
+		<div id = "spellings"> 
+			<img src = "../images/spell.jpg" />
+			<h2> Spellings </h2>
+			<h3 style="text-align:left">Number of Misspelt Words ::7</h3>
+			<h2 style="text-align:right" class="score" >Score :: 4.82</h2>
+			
+			<table border="1">
+				<thead> <tr> <th>Misspelt Word</th> <th> Spelling Suggestions</th> </tr> </thead>
+				<tbody><tr> <td>youv</td> <td> ['you', 'yous', 'your', 'you v', 'Young', 'layover']</td> </tr><tr> <td>internent</td> <td> ['interment', 'internment', 'internecine', 'Internet', 'INTERNET', 'internee', "interne's", 'internetwork']</td> </tr><tr> <td>nt</td> <td> ['NT', 'tn', 'mt', 'n', 't', 'net', 'nit', 'int', 'ant', 'not', 'nut', 'nth', 'Ont', 'et', 'st']</td> </tr><tr> <td>dont</td> <td> ["don't", 'font', 'dint', 'don', 'dot', 'donut', 'done', 'dent', 'dons', 'dost', 'dona', 'dolt', 'cont', 'dong', 'wont']</td> </tr><tr> <td>freind</td> <td> ['friend', 'reindeer', 'freeing', 'Freida', 'Freeland', 'Farand', 'frenetic']</td> </tr></tbody>
+			</table>
+		</div>
+		<br /> <hr /> <hr /> <br />
+		
+		<div id ="grammar">
+			<img src = "../images/grammar.jpg" />
+			<h2> Grammar </h2>
+			<h2 style="text-align:right" class = "score" >Score :: 1.92</h2>
+			
+			<table border="0">
+				<thead> <tr> <th>Sentences</th> <th> Score</th> </tr> </thead>
+				<tbody><tr> <td>"How does the computer effect people?</td> <td> 5</td> </tr><tr> <td>Because people who dont like writing usually just have a computer to type on.</td> <td> 4</td> </tr><tr> <td>@PERCENT1 of my freind's agree with me because they have been through this, and they would'nt wake up to go to school.</td> <td> 4</td> </tr><tr> <td>I suggest that you will agree on my opinion'.</td> <td> 3</td> </tr><tr> <td>But people rarely do that, parent's and kid's stay on the computer not caring about nothing else but the screen the kid's stay up all night knowing they have school they dont even do their homework.</td> <td> 3</td> </tr><tr> <td>My mom say's that when she was younger she loved the internent.</td> <td> 1</td> </tr><tr> <td>Thank's again.</td> <td> 1</td> </tr><tr> <td>She never wanted to get off: @CAPS1 i hope youv enjoyed my opinion', thank's for even taking this time to read it.</td> <td> 1</td> </tr><tr> <td>Dr @PERSON1's of @ORGANIZATION1 researched how parent's hardly spend time with their family.</td> <td> 1</td> </tr><tr> <td>@CAPS1 there are way's that computer's can be really bad and really good"", they're good.</td> <td> 1</td> </tr><tr> <td>For example father's they basically always on the computer either working or looking up stuff.</td> <td> 1</td> </tr><tr> <td>I have proof my freind's, research show's, my mother also agree's.</td> <td> 1</td> </tr><tr> <td>"
+</td> <td> -1</td> </tr> </tbody>
+			</table>
+		</div>
+		<br /> <hr /> <hr /> <br />
+			<br /> <hr /> <hr /> <br />
+		<div> 
+		<img src = "../images/essay.jpg" />
+		
+		<h2> Essay </h2> <div id = "essay">"How does the computer effect people? @CAPS1 there are way's that computer's can be really bad and really good"", they're good. Because people who dont like writing usually just have a computer to type on. But people rarely do that, parent's and kid's stay on the computer not caring about nothing else but the screen the kid's stay up all night knowing they have school they dont even do their homework. I have proof my freind's, research show's, my mother also agree's. I suggest that you will agree on my opinion'. @PERCENT1 of my freind's agree with me because they have been through this, and they would'nt wake up to go to school. Dr @PERSON1's of @ORGANIZATION1 researched how parent's hardly spend time with their family. For example father's they basically always on the computer either working or looking up stuff. My mom say's that when she was younger she loved the internent. She never wanted to get off: @CAPS1 i hope youv enjoyed my opinion', thank's for even taking this time to read it. Thank's again."</div></div> <br /> <hr /> <hr /> <br />
+	</div>
+	
+</body>
+
+</html>
+
+
